@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Login</title>
+    <%- include('partials/head.ejs') %>
+</head>
+<body>
+<div class="login">
+    <form action="/login" method="post">
+        <label for="username">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="username" placeholder="Username" id="username" required>
+        <label for="password">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        <div id="error-message">
+            <%= error %>
+        </div>
+        <input type="submit" value="Login">
+    </form>
+</div>
+</body>
+</html>

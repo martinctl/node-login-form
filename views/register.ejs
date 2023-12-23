@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Login</title>
+    <title>Register</title>
     <%- include('partials/head.ejs') %>
 </head>
 <body>
 <div class="login">
-    <form action="/login" method="post">
+    <form action="/register" method="post">
         <label for="username">
             <i class="fas fa-user"></i>
         </label>
@@ -15,10 +15,14 @@
             <i class="fas fa-lock"></i>
         </label>
         <input type="password" name="password" placeholder="Password" id="password" required>
+        <label for="confirmPassword">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword" required>
         <div id="error-message">
             <%= error %>
         </div>
-        <input type="submit" value="Login">
+        <input type="submit" value="Register">
     </form>
 </div>
 </body>
